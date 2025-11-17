@@ -1,0 +1,49 @@
+<html><head>
+  <meta charset="UTF-8">
+  <title>Simple Agent Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 60px;
+    }
+    img {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+    iframe {
+      width: 400px;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Google Logo -->
+  <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DgK00000BRbMz',
+				'Messaging_Agent',
+				'https://orgfarm-ca28dcd2ab-dev-ed.develop.my.site.com/ESWMessagingAgent1763359939681',
+				{
+					scrt2URL: 'https://orgfarm-ca28dcd2ab-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-ca28dcd2ab-dev-ed.develop.my.site.com/ESWMessagingAgent1763359939681/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+  
+</body></html>
